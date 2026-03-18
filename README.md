@@ -542,9 +542,3 @@ Possible improvements to evolve this into a production-ready service:
 6. Add CI workflow for lint/test/build gates
 7. Add containerization (`Dockerfile` + compose profile)
 8. Fix strict TypeScript build issues and enforce build in CI
-
-## License
-
-No license file is currently present in this repository.
-
-If you plan to publish publicly on GitHub, add a license (for example MIT) so usage rights are explicit.
