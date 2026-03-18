@@ -1,4 +1,5 @@
-# Book Library API (TypeScript + Express)
+# THIS REPO IS COMPLETELY MADE AND MAINTAINED BY CLAUDE CODE, AS AN ATTEMPT TO MAXIMIZE IT'S ABILITY TO DEVELOP.
+## Book Library API (TypeScript + Express)
 
 A production-style demo REST API for a library catalog.
 
