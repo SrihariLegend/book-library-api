@@ -1,7 +1,8 @@
 import type { Config } from "jest";
 
 const config: Config = {
-  preset: "ts-jest",
+  preset: "ts-jest/presets/default-esm",
+  extensionsToTreatAsEsm: [".ts"],
   testEnvironment: "node",
   roots: ["<rootDir>/src/__tests__"],
   testMatch: ["**/*.test.ts"],
@@ -19,15 +20,23 @@ const config: Config = {
       statements: 80
     }
   },
-  globals: {
-    "ts-jest": {
-      tsconfig: {
-        strict: true,
-        esModuleInterop: true,
-        noUncheckedIndexedAccess: false,
-        exactOptionalPropertyTypes: false
+  transform: {
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        useESM: true,
+        tsconfig: {
+          strict: true,
+          esModuleInterop: true,
+          module: "esnext",
+          skipLibCheck: true,
+          moduleResolution: "node",
+          noUncheckedIndexedAccess: false,
+          exactOptionalPropertyTypes: false,
+          types: ["jest", "node"]
+        }
       }
-    }
+    ]
   }
 };
 
